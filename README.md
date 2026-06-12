@@ -1,14 +1,16 @@
-# Alternance Tracker
+# Job Tracker
 
 Like every student at Epitech, I'm applying to a lot of alternance positions.
 I was tracking everything in an Excel sheet and it got messy fast no idea
 which companies I needed to follow up with, what my actual response rate was,
 or which application was at which stage.
 
-**[Live demo](https://911-parth.github.io/alternance-tracker/)** — demo data is stored in your browser, go ahead and click around.
+**[Use it here](https://911-parth.github.io/job-tracker/)** — fully usable in your browser: your applications are saved in local storage, so they're still there when you come back. Nothing leaves your machine.
 
 So I built the tool I wanted: a small full-stack app to track applications
 through the pipeline (to apply → applied → interview → offer / rejected).
+I made it for my alternance hunt, but it works the same for any job search —
+contract types cover alternance, stage and CDI.
 
 ## Features
 

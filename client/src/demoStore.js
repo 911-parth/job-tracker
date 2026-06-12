@@ -1,7 +1,7 @@
 // Demo backend for the GitHub Pages build: same interface as api.js but
 // everything lives in localStorage. The real app talks to the Express API.
 
-const KEY = "alternance-tracker-demo";
+const KEY = "job-tracker-demo";
 
 const SEED = [
   { company: "Datadog", role: "Frontend Engineer (alternance)", contract: "alternance", status: "interview", applied_on: "2026-05-12", location: "Paris", link: "", notes: "Tech interview round 2 next week. Stack: React + Go." },

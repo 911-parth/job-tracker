@@ -47,7 +47,7 @@ export default function App() {
   return (
     <div className="container">
       <header>
-        <h1>Alternance Tracker</h1>
+        <h1>Job Tracker</h1>
         <button className="primary" onClick={() => setShowForm(!showForm)}>
           {showForm ? "Close" : "+ Add application"}
         </button>
@@ -56,7 +56,7 @@ export default function App() {
       {import.meta.env.VITE_DEMO === "1" && (
         <div className="demo-note">
           Live demo — data is stored in your browser only. Source on{" "}
-          <a href="https://github.com/911-parth/alternance-tracker">GitHub</a>.
+          <a href="https://github.com/911-parth/job-tracker">GitHub</a>.
         </div>
       )}
       {error && <div className="error">{error}</div>}
