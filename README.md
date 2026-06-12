@@ -1,7 +1,7 @@
 # Alternance Tracker
 
 Like every student at Epitech, I'm applying to a lot of alternance positions.
-I was tracking everything in an Excel sheet and it got messy fast — no idea
+I was tracking everything in an Excel sheet and it got messy fast no idea
 which companies I needed to follow up with, what my actual response rate was,
 or which application was at which stage.
 
