@@ -5,6 +5,8 @@ I was tracking everything in an Excel sheet and it got messy fast no idea
 which companies I needed to follow up with, what my actual response rate was,
 or which application was at which stage.
 
+**[Live demo](https://911-parth.github.io/alternance-tracker/)** — demo data is stored in your browser, go ahead and click around.
+
 So I built the tool I wanted: a small full-stack app to track applications
 through the pipeline (to apply → applied → interview → offer / rejected).
 

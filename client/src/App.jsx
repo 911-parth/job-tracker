@@ -53,6 +53,12 @@ export default function App() {
         </button>
       </header>
 
+      {import.meta.env.VITE_DEMO === "1" && (
+        <div className="demo-note">
+          Live demo — data is stored in your browser only. Source on{" "}
+          <a href="https://github.com/911-parth/alternance-tracker">GitHub</a>.
+        </div>
+      )}
       {error && <div className="error">{error}</div>}
       {stats && <StatsBar stats={stats} />}
       {showForm && <AddForm onSubmit={handleAdd} />}

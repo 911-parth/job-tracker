@@ -1,3 +1,9 @@
+// In demo mode (the hosted GitHub Pages build) we swap the HTTP layer for a
+// localStorage store so the demo works without a server.
+import * as demo from "./demoStore.js";
+
+const DEMO = import.meta.env.VITE_DEMO === "1";
+
 const BASE = "/api";
 
 async function request(path, options = {}) {
@@ -12,16 +18,20 @@ async function request(path, options = {}) {
   return res.status === 204 ? null : res.json();
 }
 
-export const getApplications = (status) =>
-  request(`/applications${status ? `?status=${status}` : ""}`);
+export const getApplications = DEMO
+  ? demo.getApplications
+  : (status) => request(`/applications${status ? `?status=${status}` : ""}`);
 
-export const createApplication = (data) =>
-  request("/applications", { method: "POST", body: JSON.stringify(data) });
+export const createApplication = DEMO
+  ? demo.createApplication
+  : (data) => request("/applications", { method: "POST", body: JSON.stringify(data) });
 
-export const updateApplication = (id, data) =>
-  request(`/applications/${id}`, { method: "PATCH", body: JSON.stringify(data) });
+export const updateApplication = DEMO
+  ? demo.updateApplication
+  : (id, data) => request(`/applications/${id}`, { method: "PATCH", body: JSON.stringify(data) });
 
-export const deleteApplication = (id) =>
-  request(`/applications/${id}`, { method: "DELETE" });
+export const deleteApplication = DEMO
+  ? demo.deleteApplication
+  : (id) => request(`/applications/${id}`, { method: "DELETE" });
 
-export const getStats = () => request("/stats");
+export const getStats = DEMO ? demo.getStats : () => request("/stats");
